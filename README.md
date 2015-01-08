@@ -2,7 +2,7 @@ Empirically Adjusted Reproductive Number - Manuscript Companion (EARNMC)
 =========================================================================
 
 This is an R package and collection of scripts to document and reproduce the methods 
-employed in the paper: "An Empirically Adjusted Approach to Reproductive Number Estimation for Stochastic Compartmental Models: A Case Study of Two Ebola Outbreaks" by [Grant Brown](http://grantbrown.github.io), [Jacob Oleson](http://www.public-health.uiowa.edu/people/jacob-oleson/), and [Aaron Porter](http://inside.mines.edu/~aporter/).
+employed in the paper: "An Empirically Adjusted Approach to Reproductive Number Estimation for Stochastic Compartmental Models: A Case Study of Two Ebola Outbreaks" by [Grant Brown](http://grantbrown.github.io), [Jacob Oleson](http://www.public-health.uiowa.edu/people/jacob-oleson/), and [Aaron Porter](http://inside.mines.edu/~aporter/). 
 
 Included in the EARNMC package are:
 
@@ -23,7 +23,13 @@ To replicate our analyses, you will need first to install [libSpatialSEIR](https
 
 Use
 -------------
-To generate the figures and tables featured in the manuscript, simply run the "GenerateManuscriptFigures.R" file in the scripts folder. To replicate the analyses, please see the files in /scripts/analyses
+To generate the figures and tables featured in the manuscript, simply run the "GenerateManuscriptFigures.R" file in the scripts folder. To replicate the analyses, please see the files in the "/scripts/analyses" folder.
 
+Help
+-------------
+If you have questions or require assistance, please use the GitHub [issues](https://github.com/grantbrown/EARNMC/issues) feature to ask for help/clarification. You may also contact Grant Brown, the corresponding author, at grant-brown.uiowa.edu. 
+
+License
+-------------
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>, with the exception of pre-requisite components such as data and software libraries, which are distributed in accordance with their own licenses.  
