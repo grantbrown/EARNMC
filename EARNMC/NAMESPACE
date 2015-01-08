@@ -1,1 +1,7 @@
+import(spatialSEIR)
+import(coda)
+import(parallel)
+import(ggplot2)
+import(knitr)
+import(splines)
 exportPattern("^[[:alpha:]]+")
