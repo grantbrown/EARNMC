@@ -1,0 +1,10 @@
+Package: EARNMC
+Type: Package
+Title: A Manuscript Companion to An Empirically Adjusted Approach to Reproductive Number Estimation for Stochastic Compartmental Models 
+Version: 1.0
+Date: 2015-01-05
+Author: Grant Brown
+Maintainer: Grant Brown <grant-brown@uiowa.edu> 
+Description: This package is a companion to the manuscript An Empirically Adjusted Approach to Reproductive Number Estimation for Stochastic Compartmental Models, and provides functions to replicate the model fitting excercises and to produce the included figures and tables. The actual modeling work is performed using the prerequisite "spatialSEIR" package, which is available at github.com/grantbrown/libspatialSEIR. 
+Depends: R (>= 3.1.2), spatialSEIR, coda, parallel, ggplot2
+License: GPL-3
