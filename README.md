@@ -26,4 +26,4 @@ Use
 To generate the figures and tables featured in the manuscript, simply run the "GenerateManuscriptFigures.R" file in the scripts folder. To replicate the analyses, please see the files in /scripts/analyses
 
 
-<a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>, with the exception of pre-requisite components such as data and software libraries, which are distributed in accordance with their own licenses.  
