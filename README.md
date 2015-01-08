@@ -2,7 +2,7 @@ Empirically Adjusted Reproductive Number - Manuscript Companion (EARNMC)
 =========================================================================
 
 This is an R package and collection of scripts to document and reproduce the methods 
-employed in the paper: "An Empirically Adjusted Approach to Reproductive Number Estimation for Stochastic Compartmental Models:\\ A Case Study of Two Ebola Outbreaks" by [Grant Brown](http://grantbrown.github.io), [Jacob Oleson](http://www.public-health.uiowa.edu/people/jacob-oleson/), and [Aaron Porter](http://inside.mines.edu/~aporter/).
+employed in the paper: "An Empirically Adjusted Approach to Reproductive Number Estimation for Stochastic Compartmental Models: A Case Study of Two Ebola Outbreaks" by [Grant Brown](http://grantbrown.github.io), [Jacob Oleson](http://www.public-health.uiowa.edu/people/jacob-oleson/), and [Aaron Porter](http://inside.mines.edu/~aporter/).
 
 Included in the EARNMC package are:
 
