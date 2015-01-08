@@ -131,6 +131,7 @@ kikwitAnalysisKernel = function(cl,fitSeeds, underspecified)
 
 kikwitModelInstance = function(params) 
 {
+    # Need library call here because this executes in a node
     library(spatialSEIR)
     seed = params[[1]]
     outFileName = params[[2]]

@@ -121,7 +121,6 @@ WestAfricaAnalysisScript = function(modelDF, modelMode=c("DF", "knots"), pred.da
   }
   
   maxIdx = nrow(I_star)
-  library(splines)
   # Guinea, Liberia, Sierra Leone, Nigeria
   N = matrix(c(10057975, 4128572, 6190280), nrow = nrow(I_star),ncol = 3, 
              byrow=TRUE)
@@ -279,6 +278,7 @@ WestAfricaAnalysisScript = function(modelDF, modelMode=c("DF", "knots"), pred.da
   
   buildAndBurnInModel = function(params)
   {
+    # Need this call because this function executes in a node
     library(spatialSEIR)
     # save proposal and params to node workspace
     proposal <<- proposeParameters(params[["seedVal"]], params[["chainNumber"]])

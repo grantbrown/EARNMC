@@ -337,7 +337,6 @@ makeWestAfricaPredictionPlot = function(ModelResults=NA)
   daysSinceJan.predict = c(max(daysSinceJan) + 1, max(daysSinceJan) 
                            + seq(2,pred.days-2,2))
   
-  library(splines)
   splineBasis = ns(daysSinceJan, df = modelDF)
   splineBasis.predict = predict(splineBasis, daysSinceJan.predict)
   Z = matrix(splineBasis, ncol = modelDF)
@@ -405,12 +404,10 @@ makeWestAfricaPredictionPlot = function(ModelResults=NA)
                    "Days in Infectious Category")
   colnames(c2) = colnames(c1)
   colnames(c3) = colnames(c1)
-  library(coda)
   mcl = mcmc.list(as.mcmc(c1), 
                   as.mcmc(c2),
                   as.mcmc(c3))
   summaryTable = summary(mcl)
-  library(knitr)
   summaryTableLatex = kable(round(summaryTable$quantiles,2), format = "latex")
   cat(summaryTableLatex, file = "./DF3QuantlesTable.partial.tex")
   
@@ -663,7 +660,6 @@ makeSplineBasisPlotPDF = function(){
     daysSinceJan.predict = c(max(daysSinceJan) + 1, max(daysSinceJan) 
                              + seq(2,pred.days-2,2))
     
-    library(splines)
     splineBasis = ns(daysSinceJan, df = modelDF)
     splineBasis.predict = predict(splineBasis, daysSinceJan.predict)
     Z = matrix(splineBasis, ncol = modelDF)
