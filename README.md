@@ -23,7 +23,9 @@ To replicate our analyses, you will need first to install [libSpatialSEIR](https
 
 Use
 -------------
-To generate the figures and tables featured in the manuscript, simply run the "GenerateManuscriptFigures.R" file in the scripts folder. To replicate the analyses, please see the files in the "/scripts/analyses" folder.
+To generate the figures and tables featured in the manuscript, simply run the "GenerateManuscriptFigures.R" file in the scripts folder. 
+By default, this will use the included MCMC output from our own analysis; the process of running all of the models we considered takes quite a bit of time. 
+To replicate the actual analyses, please see the files in the "/scripts/analyses" folder. 
 
 Help
 -------------
