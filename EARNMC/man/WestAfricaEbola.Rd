@@ -5,7 +5,7 @@
     Data for the 2014-2015 Ebola Outbreak in West Africa
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+     Data for the 2014-2015 Ebola Outbreak in West Africa  
 }
 \usage{data("WestAfricaEbola")}
 \format{
@@ -31,12 +31,7 @@
     \item{\code{Deaths_Mali}}{a numeric vector}
   }
 }
-\details{
 
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
 \references{
     Sourced from county_timeseries.csv, github.com/cmrivers/ebola
 }

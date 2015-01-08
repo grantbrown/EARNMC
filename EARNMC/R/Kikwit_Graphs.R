@@ -54,7 +54,7 @@ makeKikwitGraphPDFs = function(fullSpecResultsFilename=NA,
         lines(1:(length(r02$mean) - 1), r02$UB[1:(length(r02$UB)-1)], lty = 2, lwd = CI_width)
     dev.off()
 
-    png(file="./EA_RO_Comparison_nodata.png", width = 800, height = 600)
+    png(filename="./EA_RO_Comparison_nodata.png", width = 800, height = 600)
         #layout(matrix(c(1,2,3,2), 2, 2, byrow = TRUE))
         par(mfrow = c(2,1))
        
@@ -103,7 +103,7 @@ makeKikwitGraphPDFs = function(fullSpecResultsFilename=NA,
 
     dev.off()
 
-    png(file="EA_R0_Comparison2.png", width = 800, height = 600)
+    png(filename="EA_R0_Comparison2.png", width = 800, height = 600)
         par(mfrow = c(2,1))
         plot(r01$mean[1:(length(r01$mean) - 1)], ylim = r0.ylim, main = "Traditional R0\n Posterior Mode and 90% CI",
              xlab = "Day", ylab = "Reproductive Number", type = "l", lwd = MainLineWidth)

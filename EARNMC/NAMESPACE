@@ -5,3 +5,4 @@ import(ggplot2)
 import(knitr)
 import(splines)
 exportPattern("^[[:alpha:]]+")
+
