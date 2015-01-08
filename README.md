@@ -27,7 +27,7 @@ To generate the figures and tables featured in the manuscript, simply run the "G
 
 Help
 -------------
-If you have questions or require assistance, please use the GitHub [issues](https://github.com/grantbrown/EARNMC/issues) feature to ask for help/clarification. You may also contact Grant Brown, the corresponding author, at <a href="mailto:grant-brown@uiowa.edu">@GMail</a>. 
+If you have questions or require assistance, please use the GitHub [issues](https://github.com/grantbrown/EARNMC/issues) feature to ask for help/clarification. You may also contact Grant Brown, the corresponding author, at <a href="mailto:grant-brown@uiowa.edu">grant-brown@uiowa.edu</a>. 
 
 License
 -------------
