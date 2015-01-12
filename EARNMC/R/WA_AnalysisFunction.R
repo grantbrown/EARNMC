@@ -1,4 +1,4 @@
-WestAfricaAnalysisScript = function(modelDF, modelMode=c("DF", "knots"), pred.days=120){  
+WestAfricaAnalysisScript = function(modelDF, fileName = NA, modelMode=c("DF", "knots"), pred.days=120){  
   ## set number of samples/batches
   numBurnInBatches =  1000
   convergenceCriterion =  1.02
@@ -12,7 +12,13 @@ WestAfricaAnalysisScript = function(modelDF, modelMode=c("DF", "knots"), pred.da
   totalSamples = 0
   
   ## Read in the data
-  data(WestAfricaEbola)
+  if (all(is.na(fileName))){
+      print("Using included data")
+      data(WestAfricaEbola)
+  }
+  else{
+    westAfricaEbola = read.csv(fileName)  
+  }
   dat = WestAfricaEbola[,c(1, 3,4,5)]
   
   charDate = as.character(dat[,1])
