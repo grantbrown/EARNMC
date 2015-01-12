@@ -4,10 +4,18 @@ uncumulate = function(x)
   ifelse(out >= 0, out, 0)
 }
 
-processGraphDataWA = function(){
+processGraphDataWA = function(filename=NA){
   pred.days = 120
   targetDaysPerRecord = 7
-  data(WestAfricaEbola)
+  if (all(is.na(filename)))
+  {
+      print("Using included data")
+      data(WestAfricaEbola)
+  }
+  else{
+    WestAfricaEbola = read.csv(filename)
+  }
+
   dat = WestAfricaEbola[,c(1, 3,4,5)]
   
   charDate = as.character(dat[,1])

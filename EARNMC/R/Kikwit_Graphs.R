@@ -17,7 +17,6 @@ makeKikwitGraphPDFs = function(fullSpecResultsFilename=NA,
         KikwitUnderspecResults = outData
     }
 
-
     CI_width = 2
     MainLineWidth = 3
     ThresholdWidth = 2
@@ -45,6 +44,28 @@ makeKikwitGraphPDFs = function(fullSpecResultsFilename=NA,
 
         barplot(t(KikwitUnderspecResults$simResults$I_star), main = "New Cases", xlab = "Day", ylab = "Cases")
         axis(side = 1, at = seq(0, (length(r01$mean)), 50))
+
+        plot(r02$mean[1:(length(r02$mean) - 1)], ylim = r0.ylim, main = "EA-R: Underspecified Intensity\n Posterior Mode and 90% CI",
+             xlab = "Day", ylab = "Reproductive Number", type = "l", lwd = MainLineWidth)
+        abline(h = seq(0,5,0.2), lty = 3,col="lightgrey")
+        abline(h = 1.0, col = "blue", lwd = ThresholdWidth, lty = 2)
+        lines(1:(length(r02$mean) - 1), r02$LB[1:(length(r02$LB)-1)], lty = 2, lwd = CI_width)
+        lines(1:(length(r02$mean) - 1), r02$UB[1:(length(r02$UB)-1)], lty = 2, lwd = CI_width)
+    dev.off()
+
+    pdf(file="./EA_RO_Comparison_nodata.pdf", width = 12, height = 12)
+        #layout(matrix(c(1,2,3,2), 2, 2, byrow = TRUE))
+        par(mfrow = c(2,1))
+       
+
+
+        plot(r01$mean[1:(length(r01$mean) - 1)], ylim = r0.ylim, main = "Traditional R0: Underspecified Intensity\n Posterior Mode and 90% CI",
+             xlab = "Day", ylab = "Reproductive Number", type = "l", lwd = MainLineWidth)
+        abline(h = seq(0,5,0.2), lty = 3,col="lightgrey")
+        abline(h = 1.0, col = "blue", lwd = ThresholdWidth, lty = 2)
+        lines(1:(length(r01$mean) - 1), r01$LB[1:(length(r01$LB)-1)], lty = 2, lwd = CI_width)
+        lines(1:(length(r01$mean) - 1), r01$UB[1:(length(r01$UB)-1)], lty = 2, lwd = CI_width)
+
 
         plot(r02$mean[1:(length(r02$mean) - 1)], ylim = r0.ylim, main = "EA-R: Underspecified Intensity\n Posterior Mode and 90% CI",
              xlab = "Day", ylab = "Reproductive Number", type = "l", lwd = MainLineWidth)
