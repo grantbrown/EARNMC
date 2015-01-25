@@ -5,7 +5,7 @@ WestAfricaAnalysisScript = function(modelDF, fileName = NA, modelMode=c("DF", "k
   convergenceCriterion =  1.02
   convergenceSampleSize = 100000
   convergenceBatchSize = 100000
-  minimumSamples =  3000000
+  minimumSamples =  100000
   extraR0Iterations = 500
   extraR0BatchSize = 1000
   iterationStride = 1000
@@ -464,7 +464,6 @@ cat("Chains converged, finishing up...\n")
 
 cleanUpParamsList = list(1,2,3)
 chains = parLapply(cl, cleanUpParamsList, finishSimulation)
-save("chains", file="./chainOutput.Robj")
 stopCluster(cl)
 
 
@@ -698,6 +697,18 @@ rownames(pred.table) = paste(rownames(pred.table), "&nbsp;", sep = "")
 colnames(pred.table) = c("Guinea", 
                          "Liberia", 
                          "Sierra Leone")
+
+predlist=list(Guinea.mean=Guinea.mean,
+              Liberia.mean=Liberia.mean,
+              SierraLeone.mean=SierraLeone.mean,
+              Guinea.LB=Guinea.LB,
+              Liberia.LB=Liberia.LB,
+              SierraLeone.LB=SierraLeone.LB,
+              Guinea.UB=Guinea.UB,
+              Liberia.UB=Liberia.UB,
+              SierraLeone.UB=SierraLeone.UB)
+
+save("chains", "predlist", file="./chainOutput.Robj")
 
 return(list(chainOutput=chains,
             predictions=pred.table))
