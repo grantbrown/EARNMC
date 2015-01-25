@@ -5,7 +5,7 @@ WestAfricaAnalysisScript = function(modelDF, fileName = NA, modelMode=c("DF", "k
   convergenceCriterion =  1.02
   convergenceSampleSize = 100000
   convergenceBatchSize = 100000
-  minimumSamples =  100000
+  minimumSamples =  500000
   extraR0Iterations = 500
   extraR0BatchSize = 1000
   iterationStride = 1000
@@ -711,5 +711,5 @@ predlist=list(Guinea.mean=Guinea.mean,
 save("chains", "predlist", file="./chainOutput.Robj")
 
 return(list(chainOutput=chains,
-            predictions=pred.table))
+            predictions=predlist))
 }
