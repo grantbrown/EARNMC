@@ -7,7 +7,7 @@ runFunc = function(params){
     DF = params[[1]]
     tpts = params[[2]]
     result = WestAfricaAnalysisScript(DF, throwAwayTpts=tpts)
-    save("result", file=paste("./DF",DF "/pred_performance_dropping_", tpts, ".Rda.bz2", sep =""), compress="bzip2")
+    save("result", file=paste("./DF",DF, "/pred_performance_dropping_", tpts, ".Rda.bz2", sep =""), compress="bzip2")
 }
 
 DFs = c(0,1,2,3)
