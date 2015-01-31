@@ -708,8 +708,7 @@ predlist=list(Guinea.mean=Guinea.mean,
               SierraLeone.LB=SierraLeone.LB,
               Guinea.UB=Guinea.UB,
               Liberia.UB=Liberia.UB,
-              SierraLeone.UB=SierraLeone.UB,
-              rawPreds=preds)
+              SierraLeone.UB=SierraLeone.UB)
 
 save("chains", "predlist", file="./chainOutput.Robj")
 
