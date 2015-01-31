@@ -245,7 +245,7 @@ proposeParameters = function(seedVal, chainNumber)
   
   phi = 0.01 # Overdispersion precision
   
-  outFileName = paste("./chain_output_ebola_", chainNumber ,".txt", sep = "")
+  outFileName = paste("./chain_output_ebola_cn", chainNumber, "_tpt", nrow(I_star), "_df", length(beta) ,".txt", sep = "")
   
   # Make a crude guess as to the true compartments:
   # S_star, E_star, R_star, and thus S,E,I and R
@@ -448,6 +448,12 @@ iterationParams = list(iterationParams, iterationParams, iterationParams)
 fileNames = paste(paste("chain_output_ebola_", c(paramsList[[1]]$chainNumber,
                                                  paramsList[[2]]$chainNumber,
                                                  paramsList[[3]]$chainNumber), sep = ""), ".txt", sep = "")                      
+
+nbeta = ncol(X) + ifelse(class(Z) == "matrix", ncol(Z), 0)
+fileNames = c(paste("./chain_output_ebola_cn", paramsList[[1]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""),
+              paste("./chain_output_ebola_cn", paramsList[[1]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""),
+              paste("./chain_output_ebola_cn", paramsList[[1]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""))
+
 chains = parLapply(cl, paramsList, buildAndBurnInModel)
 
 conv = FALSE
@@ -471,7 +477,6 @@ chain1 = chains[[1]]$chainOutput
 chain2 = chains[[2]]$chainOutput 
 chain3 = chains[[3]]$chainOutput 
 
-nbeta = ncol(X) + ifelse(class(Z) == "matrix", ncol(Z), 0)
 c1 = chain1[floor(nrow(chain1)/2):nrow(chain1),c(1:(nbeta + length(dmList)),
                                                  (nbeta+length(dmList)+1):
                                                    (nbeta+length(dmList)+3))]
