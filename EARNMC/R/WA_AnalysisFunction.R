@@ -445,14 +445,11 @@ iterationParams = list(convergenceSampleSize, convergenceBatchSize,
                        proportionChange = 0.1,
                        updateSamplingParams = FALSE)
 iterationParams = list(iterationParams, iterationParams, iterationParams)
-fileNames = paste(paste("chain_output_ebola_", c(paramsList[[1]]$chainNumber,
-                                                 paramsList[[2]]$chainNumber,
-                                                 paramsList[[3]]$chainNumber), sep = ""), ".txt", sep = "")                      
 
 nbeta = ncol(X) + ifelse(class(Z) == "matrix", ncol(Z), 0)
 fileNames = c(paste("./chain_output_ebola_cn", paramsList[[1]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""),
-              paste("./chain_output_ebola_cn", paramsList[[1]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""),
-              paste("./chain_output_ebola_cn", paramsList[[1]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""))
+              paste("./chain_output_ebola_cn", paramsList[[2]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""),
+              paste("./chain_output_ebola_cn", paramsList[[2]]$chainNumber, "_tpt", nrow(I_star), "_df", nbeta ,".txt", sep = ""))
 
 chains = parLapply(cl, paramsList, buildAndBurnInModel)
 
