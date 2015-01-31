@@ -4,6 +4,7 @@ library(parallel)
 cl = makeCluster(2)
 
 runFunc = function(params){
+    library(EARNMC)
     DF = params[[1]]
     tpts = params[[2]]
     result = WestAfricaAnalysisScript(DF, throwAwayTpts=tpts)
