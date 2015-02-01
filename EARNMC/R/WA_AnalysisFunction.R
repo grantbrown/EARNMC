@@ -220,7 +220,7 @@ transitionEffectiveSampleSizes = 10000
 
 # Declare prior parameters for the overdispersion precision
 priorAlpha_phi = 10000
-priorBeta_phi = 1500
+priorBeta_phi = 15000
 
 # Declare prior precision for exposure model paramters
 betaPriorPrecision = 1
