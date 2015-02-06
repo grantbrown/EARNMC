@@ -153,14 +153,14 @@ kikwitModelInstance = function(params)
     priorBetaIntercept = log(mean(-log(1-(I_star/(simResults$N))))) 
     if (underspecified)
     {
-        ExposureModel = buildExposureModel(simResults$X, Z=NA, 
+        ExposureModel = buildExposureModel_depricated(matrix(simResults$X, ncol = 1), Z=NA, 
                                            beta = c(priorBetaIntercept), betaPriorPrecision = 0.1,
                                            betaPriorMean = 0,
                                            nTpt=nrow(I_star))
     }
     else
     {
-        ExposureModel = buildExposureModel(simResults$X, Z=simResults$Z, 
+        ExposureModel = buildExposureModel_depricated(simResults$X, Z=simResults$Z, 
                                            beta = c(priorBetaIntercept, 0), betaPriorPrecision = 0.1,
                                            betaPriorMean=0,
                                            nTpt=nrow(I_star))

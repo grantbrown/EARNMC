@@ -251,7 +251,7 @@ proposeParameters = function(seedVal, chainNumber)
   # S_star, E_star, R_star, and thus S,E,I and R
   DataModel = buildDataModel(I_star, type = "overdispersion", 
                              params=c(priorAlpha_phi,priorBeta_phi))
-  ExposureModel = buildExposureModel(X, Z, beta, betaPriorPrecision, 0, offsets, nTpt = nrow(I_star))
+  ExposureModel = buildExposureModel_depricated(X, Z, beta, betaPriorPrecision, 0, offsets, nTpt = nrow(I_star))
   ReinfectionModel = buildReinfectionModel("SEIR")
   SamplingControl = buildSamplingControl(iterationStride=iterationStride,
                                          sliceWidths=c(1, # S_star
