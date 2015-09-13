@@ -4,5 +4,8 @@ import(parallel)
 import(ggplot2)
 import(knitr)
 import(splines)
+import(Matrix)
+import(compiler)
+import(tikzDevice)
 exportPattern("^[[:alpha:]]+")
 

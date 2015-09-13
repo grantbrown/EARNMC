@@ -1,0 +1,1 @@
+Either place the files created by ../simulation.R in this folder, or extract those archived at https://goo.gl/DKzoqQ.

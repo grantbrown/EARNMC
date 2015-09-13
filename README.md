@@ -17,7 +17,7 @@ Also included in this repository is a manuscript pre-print, which has been submi
 
 Installation
 -------------
-To replicate our analyses, you will need first to install [libSpatialSEIR](https://github.com/grantbrown/libspatialSEIR). The latest instructions are available [here](https://github.com/grantbrown/libspatialSEIR/wiki/Installation). We also depend on [ggplot2](https://github.com/hadley/ggplot2) for some of the figures. Once you have the prerequisites prepared, the R package can be installed from a command prompt running in the repository root:
+To replicate our analyses, you will need first to install [libSpatialSEIR](https://github.com/grantbrown/libspatialSEIR). The latest instructions are available [here](https://github.com/grantbrown/libspatialSEIR/wiki/Installation). We also depend on [ggplot2](https://github.com/hadley/ggplot2) and [tikzDevice](https://github.com/Sharpie/RTikZDevice) for some of the figures. Once you have the prerequisites prepared, the R package can be installed from a command prompt running in the repository root:
 
     R CMD INSTALL EARNMC
 
